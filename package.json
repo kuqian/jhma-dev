@@ -1,0 +1,19 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "Node exprss examples",
+  "main": "index.js",
+  "engines": {
+    "node": "10.11.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kun qian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

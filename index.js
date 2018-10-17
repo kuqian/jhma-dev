@@ -1,6 +1,8 @@
 const express = require('express');
-const app = express();
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20');
 
+const app = express();
 app.get('/', (req, res) => {
     res.send({hi: "there"});
 });

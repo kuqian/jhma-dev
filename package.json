@@ -8,13 +8,18 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "start": "node index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "author": "kun qian",
   "license": "ISC",
   "dependencies": {
+    "cookie-session": "^2.0.0-beta.3",
+    "cookie-sessions": "0.0.2",
     "express": "^4.16.4",
+    "mongoose": "^5.3.4",
+    "nodemon": "^1.18.4",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0"
   }

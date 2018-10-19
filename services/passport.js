@@ -24,7 +24,11 @@ passport.deserializeUser((id, done) => {
 passport.use(new GoogleStrategy({
     clientID: keys.googleClientID,
     clientSecret:keys.googleClientSecret,
-    callbackURL:'/auth/google/callback'
+    //this is a relative url
+    callbackURL:'/auth/google/callback',
+    //the strategy assume if request went through proxy, https->http
+    //fixing the proxy https --> http issue
+    proxy: true
 }, (accessToken, refreshToken, profile, done) => {
     //anytime attempting to connect to database
     //it is a async action

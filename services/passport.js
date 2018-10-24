@@ -29,21 +29,34 @@ passport.use(new GoogleStrategy({
     //the strategy assume if request went through proxy, https->http
     //fixing the proxy https --> http issue
     proxy: true
-}, (accessToken, refreshToken, profile, done) => {
-    //anytime attempting to connect to database
-    //it is a async action
-    //there's a "promise"....it's been updated
-    User.findOne({googleID: profile.id})
-        .then((existingUser) => {
-            if(existingUser){
-                //already have an user with the same id
-                done(null,existingUser);
-            }else{
-                //new mongoose instance
-                new User({googleID: profile.id})
-                    .save()
-                    .then(user => done(null, user));
+}, 
+async (accessToken, refreshToken, profile, done) => {
+    const existingUser = await User.findOne({googleID: profile.id});
+    if(existingUser){
+        //already have an user with the same id
+        done(null,existingUser);
+    }else{
+        //new mongoose instance
+        const user = await new User({googleID: profile.id}).save();
+        done(null, user);
+    }
+}
+));
+// (accessToken, refreshToken, profile, done) => {
+//     //anytime attempting to connect to database
+//     //it is a async action
+//     //there's a "promise"....it's been updated
+//     User.findOne({googleID: profile.id})
+//         .then((existingUser) => {
+//             if(existingUser){
+//                 //already have an user with the same id
+//                 done(null,existingUser);
+//             }else{
+//                 //new mongoose instance
+//                 new User({googleID: profile.id})
+//                     .save()
+//                     .then(user => done(null, user));
 
-            }
-        });
-}));
+//             }
+//         });
+// }

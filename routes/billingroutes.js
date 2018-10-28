@@ -20,6 +20,6 @@ module.exports = app => {
         //why can we access user by using req.user? this is set up by passport
         req.user.credits += 50;
         const updatedUser = await req.user.save();
-        res.send(user);
+        res.send(updatedUser);
     });
 }

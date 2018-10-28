@@ -1,0 +1,38 @@
+html, body{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+#root{
+    background-color: #000;
+	background-image: url(./images/musician.jpg);
+	background-position: center;
+	background-size: cover;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.calendarH2{
+    color:white;
+}
+.lbtn{
+        background-color: 	#00BFFF; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 2px;
+}
+.calenderContainer{
+    text-align: center;
+}
+.calendar{
+    display: inline-block;
+}
+/* confirm days btn */
+.cbtn{
+    display: inline-block;
+}

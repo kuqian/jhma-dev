@@ -37,7 +37,10 @@ async (accessToken, refreshToken, profile, done) => {
         done(null,existingUser);
     }else{
         //new mongoose instance
-        const user = await new User({googleID: profile.id}).save();
+        const user = await new User({
+            googleID: profile.id, displayName: profile.displayName
+        }
+        ).save();
         done(null, user);
     }
 }

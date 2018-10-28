@@ -7,35 +7,35 @@ class Dashboard extends Component {
       <ul className="collection">
         <li className="collection-item avatar">
           <img src={avatar} alt={'logo'} className="circle"></img>
-          <span className="title">{this.props.auth?'you are in':'no logged in yet'}</span>
-          <p>First Line
-             Second Line
-      </p>
+          <span className="title">Your Profile</span>
+          <div>
+          <a>Expand</a>
+          </div>
           
         </li>
         <li className="collection-item avatar">
-          <i className="material-icons circle">folder</i>
-          <span className="title">Title</span>
-          <p>First Line
-             Second Line
-      </p>
-          <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+          <i className="material-icons circle">today</i>
+          <span className="title">Scheduled JHMA Session</span>
+          <div>
+          <a>Expand</a>
+          </div>
+          <a href="#!" className="secondary-content"><i className="material-icons"></i></a>
         </li>
         <li className="collection-item avatar">
-          <i className="material-icons circle green">insert_chart</i>
-          <span className="title">Title</span>
-          <p>First Line
-             Second Line
-      </p>
-          <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+          <i className="material-icons circle green">folder</i>
+          <span className="title">Your Homework</span>
+          <div>
+          <a>Expand</a>
+          </div>
+          <a href="#!" className="secondary-content"><i className="material-icons"></i></a>
         </li>
         <li className="collection-item avatar">
-          <i className="material-icons circle red">play_arrow</i>
-          <span className="title">Title</span>
-          <p>First Line
-             Second Line
-      </p>
-          <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+          <i className="material-icons circle red">insert_chart</i>
+          <span className="title">Your Progress</span>
+          <div>
+          <a>Expand</a>
+          </div>
+          <a href="#!" className="secondary-content"><i className="material-icons"></i></a>
         </li>
       </ul>
     );

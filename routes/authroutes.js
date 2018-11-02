@@ -1,9 +1,9 @@
 const passport = require('passport');
 const path = require('path');
 module.exports = app => {
-    app.get('/', (req, res) => {
-        res.send({hi: "what"});
-    });
+    // app.get('/', (req, res) => {
+    //     res.send({hi: "what"});
+    // });
     app.get('/auth/google', passport.authenticate('google', {
         scope: ['profile', 'email']
     }));

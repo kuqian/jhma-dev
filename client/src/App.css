@@ -36,3 +36,6 @@ html, body{
 .cbtn{
     display: inline-block;
 }
+.dropzoneText{
+    color:white;
+}

@@ -5,11 +5,6 @@ const requireLogin = require('../middlewares/requireLogin');
 //express does not automatically parse the post require body
 module.exports = app => {
     app.post('/api/stripe', requireLogin, async (req, res) => {
-        // if(!req.user){
-        //     return res.status(401).send({error: 'You must log in to add credits !'});
-        // }
-        //body parser document
-        //console.log(req.body);
         const charge = await stripe.charges.create({
             amount: 5000,
             currency: 'usd',

@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import { BrowserRouter, Route} from 'react-router-dom'
-import Dashboard from './Dashboard'
 import Header from './Header'
+import Dashboard from './Dashboard'
+import FileUpload from './FileUpload'
 import Mycalendar from './Mycalendar'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
@@ -25,6 +26,7 @@ class App extends Component{
                         <Route exact={true} path="/" component = {Landing}/>
                         <Route exact={true} path="/surveys" component = {Dashboard}/>
                         <Route exact={true} path="/surveys" component = {Mycalendar}/>
+                        <Route exact={true} path="/surveys" component = {FileUpload}/>
                     </div>
                 </BrowserRouter>
             </div>
